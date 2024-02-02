@@ -17,8 +17,8 @@ def toss_coin(num):
 
 
 with st.container(border=True):
-    num_sims = st.slider(
-        "Select the number of simulations", min_value=10, max_value=10_00_000, step=1
+    num_sims = st.number_input(
+        "Enter the number of simulations", min_value=1, step=1, placeholder="Enter a number"
     )
     if num_sims:
         simulations = toss_coin(num_sims)
